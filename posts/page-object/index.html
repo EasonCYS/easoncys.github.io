@@ -6,10 +6,9 @@
     
     <title>Something About Page Object | Eason Cheng</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="Page Object A page object is an object-oriented class that serves as an interface to a page of your AUT.
-The basic rule of thumb for a page object is that it should allow a software client to do anything and see anything that a human can.
-It should also provide an interface that&rsquo;s easy to program to and hides the underlying widgetry in the window.
-Access a text field you should have accessor methods that take and return a string check boxes should use booleans buttons should be represented by action oriented method names.">
+    <meta name="description" content="Page Object A page object is an object-oriented class that:
+Serves as an interface to a page of your AUT. Should allow a software client to do anything and see anything that a human can. Provides an interface that&rsquo;s easy to program to. Hides the underlying widgetry in the window. Regarding widgets:
+Text fields should have accessor methods that take and return a string. Check boxes should use booleans. Buttons should be represented by action-oriented method names.">
     <meta name="generator" content="Hugo 0.110.0">
     
     
@@ -33,27 +32,24 @@ Access a text field you should have accessor methods that take and return a stri
     
     
     <meta property="og:title" content="Something About Page Object" />
-<meta property="og:description" content="Page Object A page object is an object-oriented class that serves as an interface to a page of your AUT.
-The basic rule of thumb for a page object is that it should allow a software client to do anything and see anything that a human can.
-It should also provide an interface that&rsquo;s easy to program to and hides the underlying widgetry in the window.
-Access a text field you should have accessor methods that take and return a string check boxes should use booleans buttons should be represented by action oriented method names." />
+<meta property="og:description" content="Page Object A page object is an object-oriented class that:
+Serves as an interface to a page of your AUT. Should allow a software client to do anything and see anything that a human can. Provides an interface that&rsquo;s easy to program to. Hides the underlying widgetry in the window. Regarding widgets:
+Text fields should have accessor methods that take and return a string. Check boxes should use booleans. Buttons should be represented by action-oriented method names." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.org/posts/page-object/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-10-21T00:00:00+08:00" />
 <meta property="article:modified_time" content="2023-10-21T00:00:00+08:00" />
 <meta itemprop="name" content="Something About Page Object">
-<meta itemprop="description" content="Page Object A page object is an object-oriented class that serves as an interface to a page of your AUT.
-The basic rule of thumb for a page object is that it should allow a software client to do anything and see anything that a human can.
-It should also provide an interface that&rsquo;s easy to program to and hides the underlying widgetry in the window.
-Access a text field you should have accessor methods that take and return a string check boxes should use booleans buttons should be represented by action oriented method names."><meta itemprop="datePublished" content="2023-10-21T00:00:00+08:00" />
+<meta itemprop="description" content="Page Object A page object is an object-oriented class that:
+Serves as an interface to a page of your AUT. Should allow a software client to do anything and see anything that a human can. Provides an interface that&rsquo;s easy to program to. Hides the underlying widgetry in the window. Regarding widgets:
+Text fields should have accessor methods that take and return a string. Check boxes should use booleans. Buttons should be represented by action-oriented method names."><meta itemprop="datePublished" content="2023-10-21T00:00:00+08:00" />
 <meta itemprop="dateModified" content="2023-10-21T00:00:00+08:00" />
-<meta itemprop="wordCount" content="1002">
+<meta itemprop="wordCount" content="532">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Something About Page Object"/>
-<meta name="twitter:description" content="Page Object A page object is an object-oriented class that serves as an interface to a page of your AUT.
-The basic rule of thumb for a page object is that it should allow a software client to do anything and see anything that a human can.
-It should also provide an interface that&rsquo;s easy to program to and hides the underlying widgetry in the window.
-Access a text field you should have accessor methods that take and return a string check boxes should use booleans buttons should be represented by action oriented method names."/>
+<meta name="twitter:description" content="Page Object A page object is an object-oriented class that:
+Serves as an interface to a page of your AUT. Should allow a software client to do anything and see anything that a human can. Provides an interface that&rsquo;s easy to program to. Hides the underlying widgetry in the window. Regarding widgets:
+Text fields should have accessor methods that take and return a string. Check boxes should use booleans. Buttons should be represented by action-oriented method names."/>
 
 	
   </head>
@@ -127,56 +123,84 @@ Access a text field you should have accessor methods that take and return a stri
       
     </header>
     <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="page-object">Page Object</h1>
-<p>A page object is an object-oriented class that serves as an interface to a page of your AUT.</p>
-<p>The basic rule of thumb for a page object is that it should allow a software client to do anything and see anything that a human can.</p>
-<p>It should also provide an interface that&rsquo;s easy to program to and hides the underlying widgetry in the window.</p>
+<p>A page object is an object-oriented class that:</p>
 <ul>
-<li>Access a text field you should have accessor methods that take and return a string</li>
-<li>check boxes should use booleans</li>
-<li>buttons should be represented by action oriented method names.</li>
+<li>Serves as an interface to a page of your AUT.</li>
+<li>Should allow a software client to do anything and see anything that a human can.</li>
+<li>Provides an interface that&rsquo;s easy to program to.</li>
+<li>Hides the underlying widgetry in the window.</li>
+</ul>
+<p>Regarding widgets:</p>
+<ul>
+<li>Text fields should have accessor methods that take and return a string.</li>
+<li>Check boxes should use booleans.</li>
+<li>Buttons should be represented by action-oriented method names.</li>
 </ul>
 <h2 id="page-object-make-assertions">Page Object Make Assertions</h2>
-<p><strong>Page objects themselves should never make verifications or assertions.</strong></p>
-<p>There is one, single, verification which can, and should, be within the page object and that is to verify that the page, and possibly critical elements on the page, were loaded correctly.</p>
-<p>Differences of opinion</p>
 <ul>
-<li>Advocates of including assertions in page objects say that this helps avoid duplication of assertions in test scripts, makes it easier to provide better error messages, and supports a more <a href="https://martinfowler.com/bliki/TellDontAsk.html">TellDontAsk</a> style API.
+<li>Page objects themselves should never make verifications or assertions.</li>
+<li>There is one exception: verifying that the page, and possibly critical elements on the page, were loaded correctly.</li>
+</ul>
+<p><strong>Differences of opinion</strong>:</p>
 <ul>
-<li>But personally, I don&rsquo;t use tell-dont-ask. I do look to co-locate data and behavior, which often leads to similar results. One thing I find troubling about tell-dont-ask is that I&rsquo;ve seen it encourage people to become <a href="https://martinfowler.com/bliki/GetterEradicator.html">GetterEradicators</a>, seeking to get rid of all query methods. But there are times when objects collaborate effectively by providing information. A good example are objects that take input information and transform it to simplify their clients, such as using <a href="https://martinfowler.com/bliki/EmbeddedDocument.html">EmbeddedDocument</a>. I&rsquo;ve seen code get into convolutions of only telling where suitably responsible query methods would simplify matters <a href="https://martinfowler.com/bliki/TellDontAsk.html#footnote-trades">[1]</a>. For me, tell-don&rsquo;t-ask is a stepping stone towards co-locating behavior and data, but I don&rsquo;t find it a point worth highlighting.</li>
+<li>Some believe including assertions in page objects helps avoid duplication, provides better error messages, and supports a more <a href="https://martinfowler.com/bliki/TellDontAsk.html">TellDontAsk</a> style API.
+<ul>
+<li>However, concerns arise around tell-dont-ask as it may lead to getting rid of all query methods, even when they simplify collaboration.</li>
 </ul>
 </li>
-<li>Advocates of assertion-free page objects say that including assertions mixes the responsibilities of providing access to page data with assertion logic, and leads to a bloated page object.</li>
+<li>Others believe that including assertions mixes the responsibilities, which leads to a bloated page object.</li>
 </ul>
 <h2 id="page-object-return-other-page">Page Object Return Other Page</h2>
-<p>If you navigate to another page, the initial page object should return another page object for the new page <a href="https://martinfowler.com/bliki/PageObject.html#footnote-return-type">[2]</a>.</p>
-<p><strong>In general page object operations should return fundamental types (strings, dates) or other page objects.</strong></p>
-<p><strong>2:</strong> Having page objects be responsible for creating other page objects in response to things like navigation is common advice. <strong>However some practitioners prefer that page objects return some generic browser context, and the tests control which page objects to build on top of that context based on the flow of the test (particularly conditional flows).</strong> Their preference is based on the fact that the test script knows what pages are expected next and this knowledge doesn&rsquo;t need to be duplicated in the page objects themselves. They increase their preference when using statically typed languages which usually reveal page navigations in type signatures.</p>
-<h2 id="page-component-objects">Page Component Objects</h2>
-<p>A page object does not necessarily need to represent all the parts of a page itself. This was <a href="https://martinfowler.com/bliki/PageObject.html#footnote-panel-object">noted by Martin Fowler</a> in the early days, while first coining the term “panel objects”.</p>
-<p>The same principles used for page objects can be used to create “Page <em>Component</em> Objects”, as it was later called, that represent discrete chunks of the page and <strong>can be included in page objects</strong>.</p>
-<p>A page object wraps an HTML page, or fragment, with an application-specific API, allowing you to manipulate page elements without digging around in the HTML.</p>
-<p>Despite the term &ldquo;page&rdquo; object, these objects shouldn&rsquo;t usually be built for each page, but rather for the significant elements on a page <a href="https://martinfowler.com/bliki/PageObject.html#footnote-panel-object">[1]</a>.</p>
-<p>So a page showing multiple albums would have an album list page object containing several album page objects. There would probably also be a header page object and a footer page object.</p>
-<p><strong>1:</strong> There&rsquo;s an argument here that the name &ldquo;page object&rdquo; is <strong>misleading</strong> because it makes you think you should have just one page object per page. Something like &ldquo;<strong>panel object</strong>&rdquo; would be better - but the term &ldquo;page object&rdquo; is what&rsquo;s become accepted. Another illustration of why naming is one of the <a href="https://martinfowler.com/bliki/TwoHardThings.html">TwoHardThings</a>.</p>
-<p>Example:</p>
-<p><a href="https://www.selenium.dev/documentation/test_practices/encouraged/page_object_models/#page-component-objects">https://www.selenium.dev/documentation/test_practices/encouraged/page_object_models/#page-component-objects</a></p>
-<p>You can even nest component objects inside other component objects for more complex pages. If a page in the AUT has multiple components, or common components used throughout the site (e.g. a navigation bar), then it may improve maintainability and reduce code duplication.</p>
-<p>Finally, a PageObject need not represent an entire page. It may represent a section that appears frequently within a site or page, such as site navigation. The essential principle is that there is only one place in your test suite with knowledge of the structure of the HTML of a particular (part of a) page.</p>
-<h2 id="implementation-notes">Implementation Notes</h2>
-<p><a href="https://www.selenium.dev/documentation/test_practices/encouraged/page_object_models/#implementation-notes">https://www.selenium.dev/documentation/test_practices/encouraged/page_object_models/#implementation-notes</a></p>
-<p>Because we’re encouraging the developer of a test to try and think about the services they’re interacting with rather than the implementation, PageObjects should seldom expose the underlying WebDriver instance. To facilitate this, <strong>methods on the PageObject should return other PageObjects</strong>.</p>
-<p>This means we can effectively model the user’s journey through our application.</p>
-<p>It also means that should the way that pages relate to one another change (like when the login page asks the user to change their password the first time they log into a service when it previously didn’t do that), simply changing the appropriate method’s signature will cause the tests to fail to compile.</p>
-<p><strong>(Not really agree, should page know the flow of next page, and even determine it by user state?)</strong></p>
-<p>• Different results for the same action are modelled as different methods?</p>
-<p>Put another way; we can tell which tests would fail without needing to run them when we change the relationship between pages and reflect this in the PageObjects.</p>
-<p>Page objects are a classic example of encapsulation - they hide the details of the UI structure and widgetry from other components (the tests). It&rsquo;s a good design principle to look for situations like this as you develop - ask yourself &ldquo;how can I hide some details from the rest of the software?”</p>
-<p>People use “Screen” instead of “Page” in App testing</p>
-<p>Reference</p>
 <ul>
-<li><a href="https://www.selenium.dev/documentation/test_practices/encouraged/page_object_models/#page-component-objects">Page Component Object</a></li>
-<li><a href="https://martinfowler.com/bliki/PageObject.html">Page Object</a></li>
+<li>If you navigate to another page, the initial page object should return another page object for the new page.</li>
+<li>In general, page object operations should return fundamental types (strings, dates) or other page objects.</li>
 </ul>
+<p><strong>On navigation</strong>:</p>
+<ul>
+<li>Common advice is that page objects should create other page objects in response to navigation.</li>
+<li>Some practitioners prefer page objects to return a generic browser context. The test then decides which page object to create based on the test flow.</li>
+</ul>
+<h2 id="page-component-objects">Page Component Objects</h2>
+<ul>
+<li>A page object doesn&rsquo;t need to represent the entire page.</li>
+<li>The same principles for page objects apply to &ldquo;Page Component Objects&rdquo;.</li>
+<li>A page object wraps an HTML page or fragment, providing an API that hides the underlying HTML.</li>
+<li>It&rsquo;s essential to have only one place in your test suite with knowledge of the HTML structure of a particular page or part.</li>
+</ul>
+<p><strong>Naming</strong>:</p>
+<ul>
+<li>The term &ldquo;page object&rdquo; may be misleading.</li>
+<li>A better term might be &ldquo;panel object&rdquo;, but &ldquo;page object&rdquo; is the accepted term.</li>
+</ul>
+<p>Example:</p>
+<p><a href="https://www.selenium.dev/documentation/test_practices/encouraged/page_object_models/#page-component-objects">Page Component Objects in Selenium</a></p>
+<h2 id="implementation-notes">Implementation Notes</h2>
+<ul>
+<li>Page objects should hide the details of the WebDriver instance.</li>
+<li>Methods on the PageObject should return other PageObjects.</li>
+<li>This approach models the user&rsquo;s journey through the application.</li>
+<li>If the relationship between pages changes, updating the method&rsquo;s signature will cause the tests to fail.</li>
+</ul>
+<p><strong>Considerations</strong>:</p>
+<ul>
+<li>There&rsquo;s a debate on whether a page should know the flow of the next page.</li>
+<li>Different results for the same action might need different methods.</li>
+</ul>
+<p>In summary:</p>
+<ul>
+<li>Page objects encapsulate details of the UI structure, hiding them from tests.</li>
+<li>Some people use “Screen” instead of “Page” in App testing.</li>
+</ul>
+<p><strong>Reference</strong></p>
+<ol>
+<li><a href="https://martinfowler.com/bliki/TellDontAsk.html">TellDontAsk</a> - Martin Fowler&rsquo;s article discussing the principles of Tell, Don&rsquo;t Ask.</li>
+<li><a href="https://martinfowler.com/bliki/GetterEradicator.html">GetterEradicators</a> - Martin Fowler&rsquo;s view on the trend of eliminating getter methods.</li>
+<li><a href="https://martinfowler.com/bliki/EmbeddedDocument.html">EmbeddedDocument</a> - Martin Fowler&rsquo;s perspective on objects that transform input information.</li>
+<li><a href="https://martinfowler.com/bliki/PageObject.html#footnote-return-type">Page Object&rsquo;s return type</a> - Details about how a page object should handle navigation and its return types.</li>
+<li><a href="https://www.selenium.dev/documentation/test_practices/encouraged/page_object_models/#page-component-objects">Page Component Objects in Selenium</a> - Detailed documentation about page component objects from Selenium.</li>
+<li><a href="https://martinfowler.com/bliki/PageObject.html#footnote-panel-object">Page Object vs. Panel Object</a> - Martin Fowler&rsquo;s thoughts on the naming of &ldquo;page objects&rdquo;.</li>
+<li><a href="https://martinfowler.com/bliki/TwoHardThings.html">TwoHardThings</a> - Martin Fowler&rsquo;s take on the challenges of naming and cache invalidation.</li>
+</ol>
 <hr>
 <ul class="pa0">
   

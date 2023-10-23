@@ -13,10 +13,9 @@
       <pubDate>Sat, 21 Oct 2023 00:00:00 +0800</pubDate>
       
       <guid>http://example.org/posts/page-object/</guid>
-      <description>Page Object A page object is an object-oriented class that serves as an interface to a page of your AUT.
-The basic rule of thumb for a page object is that it should allow a software client to do anything and see anything that a human can.
-It should also provide an interface that&amp;rsquo;s easy to program to and hides the underlying widgetry in the window.
-Access a text field you should have accessor methods that take and return a string check boxes should use booleans buttons should be represented by action oriented method names.</description>
+      <description>Page Object A page object is an object-oriented class that:
+Serves as an interface to a page of your AUT. Should allow a software client to do anything and see anything that a human can. Provides an interface that&amp;rsquo;s easy to program to. Hides the underlying widgetry in the window. Regarding widgets:
+Text fields should have accessor methods that take and return a string. Check boxes should use booleans. Buttons should be represented by action-oriented method names.</description>
     </item>
     
     <item>
